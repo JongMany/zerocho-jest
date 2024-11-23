@@ -6,6 +6,7 @@ test('obj.minus 함수가 1,2와 함께 호출되었다.(spy 삽입)', () => {
   const result = obj.minus(1, 2);
   expect(minusSpy).toHaveBeenCalledWith(1, 2);
   expect(result).toBe(-1);
+  minusSpy.mockRestore();
 });
 
 test('obj.minus 함수에 스파이를 심고, 실행도 안되게 하기', () => {
@@ -14,6 +15,7 @@ test('obj.minus 함수에 스파이를 심고, 실행도 안되게 하기', () =
   const result = obj.minus(1, 2);
   expect(minusSpy).toHaveBeenCalledWith(1, 2);
   expect(result).toBe(undefined);
+  minusSpy.mockRestore();
 });
 
 test('obj.minus 함수에 스파이를 심고, 리턴값을 바꾸기', () => {
@@ -22,6 +24,7 @@ test('obj.minus 함수에 스파이를 심고, 리턴값을 바꾸기', () => {
   const result = obj.minus(1, 2);
   expect(minusSpy).toHaveBeenCalledWith(1, 2);
   expect(result).toBe(3);
+  minusSpy.mockRestore();
 });
 
 test('obj.minus 함수에 스파이를 심고, 한 번만 구현을 변경하기', () => {
@@ -37,6 +40,7 @@ test('obj.minus 함수에 스파이를 심고, 한 번만 구현을 변경하기
   expect(result1).toBe(3);
   expect(result2).toBe(5);
   expect(result3).toBe(-1);
+  minusSpy.mockRestore();
 });
 
 test('obj.minus 함수에 스파이를 심고, 리턴값이 다르게 나오도록 수정', () => {
@@ -50,4 +54,5 @@ test('obj.minus 함수에 스파이를 심고, 리턴값이 다르게 나오도�
   expect(result1).toBe(5);
   expect(result2).toBe(-1);
   expect(result3).toBe(-1);
+  minusSpy.mockRestore();
 });
