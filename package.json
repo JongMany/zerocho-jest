@@ -1,0 +1,17 @@
+{
+  "name": "zero-jest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@9.3.0+sha1.d4f1da7af76dbdb4ab1a08f6b5add602ffad6fd4",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
