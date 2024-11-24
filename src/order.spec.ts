@@ -31,3 +31,18 @@ test('first -> second -> third (2)', () => {
   expect(firstSpy).toHaveBeenCalledBefore(secondSpy);
   expect(secondSpy).toHaveBeenCalledBefore(thirdSpy);
 });
+
+test('인수의 일부 테스트', () => {
+  const fn = jest.fn();
+  fn({
+    a: {
+      b: {
+        c: 'hello',
+      },
+      d: 'jest',
+    },
+    e: ['world', 'jest'],
+  });
+
+  expect(fn.mock.calls[0][0].a.b.c).toBe('hello');
+});
