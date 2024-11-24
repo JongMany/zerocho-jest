@@ -4,6 +4,6 @@ export default {
   transform: {
     '^.+.tsx?$': ['ts-jest', {}],
   },
-  rootDir: 'src',
+  rootDir: '.',
   setupFilesAfterEnv: ['./testSetup.js'],
 };
