@@ -23,6 +23,7 @@ describe('isLoggedIn', () => {
       }
     }
     const res = {
+      // 메서드 체이닝을 위해서 res를 반환
       status: jest.fn(() => res),
       send: jest.fn()
     };
