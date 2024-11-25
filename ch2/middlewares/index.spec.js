@@ -1,6 +1,7 @@
 const { isLoggedIn, isNotLoggedIn } = require('./');
 
 describe('isLoggedIn', () => {
+  // 테스트 이름을 기획 문서처럼 짓는다 (isAuthenticated가 true면 X / 로그인을 한 상태이면)
   test('로그인을 한 상태면 next를 호출한다', () => {
     const req = {
       isAuthenticated() {
