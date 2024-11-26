@@ -1,6 +1,6 @@
 const passport = require('passport');
 const bcrypt = require('bcrypt');
-const User = require('../models/user');
+const User = require('../models/user'); // User처럼 데이터베이스에 연결해서 조작을 하게 되는 경우 모킹 대상이다.
 
 exports.join = async (req, res, next) => {
   const { email, nick, password } = req.body;
