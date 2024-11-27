@@ -193,6 +193,7 @@ describe("login", () => {
 
 describe("logout", () => {
   it("로그아웃 시에는 req.logout 호출 후 /로 되돌려 보낸다.", () => {
+    // callback에는 res.redirect()가 호출되는 함수가 들어간다.
     const req = {
       logout: jest.fn((cb) => {
         cb();
